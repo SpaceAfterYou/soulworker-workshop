@@ -1,31 +1,18 @@
 {
-  "extends": [
-    "config:base",
-    "group:all",
-    "schedule:weekly"
-  ],
-  "enabledManagers": [
-    "cargo",
-    "npm"
-  ],
+  "extends": ["config:base", "group:all", "schedule:weekly"],
+  "enabledManagers": ["cargo", "pnpm"],
   "packageRules": [
     {
-      "updateTypes": [
-        "patch"
-      ],
+      "updateTypes": ["patch"],
       "enabled": false
     },
     {
-      "matchManagers": [
-        "cargo"
-      ],
+      "matchManagers": ["cargo"],
       "stabilityDays": 2,
       "prCreation": "not-pending"
     },
     {
-      "matchManagers": [
-        "npm"
-      ],
+      "matchManagers": ["pnpm"],
       "stabilityDays": 2,
       "prCreation": "not-pending"
     }
