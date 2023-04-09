@@ -57,7 +57,10 @@ const os = new ExecAsync();
 console.log(await os.execCommand("pnpx prettier --write package.json"));
 console.log(await os.execCommand("pnpx prettier --write src-tauri/tauri.conf.json"));
 
-console.log(await os.execCommand("git add package.json src-tauri/tauri.conf.json"));
+console.log(await os.execCommand("git add package.json"));
+console.log(await os.execCommand(`git commit -m  "🚀 chore(package.json): bump version to ${ver.raw}"`));
 
-console.log(await os.execCommand('git commit -m  "🚀 chore(package.json): bump version"'));
+console.log(await os.execCommand("git add src-tauri/tauri.conf.json"));
+console.log(await os.execCommand(`git commit -m  "🚀 chore(src-tauri/tauri.conf.json): bump version to ${ver.raw}"`));
+
 console.log(await os.execCommand(`git tag v${ver.raw}`));
