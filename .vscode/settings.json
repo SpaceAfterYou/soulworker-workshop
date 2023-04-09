@@ -2,8 +2,5 @@
   "editor.rulers": [80, 120, 160],
   "files.insertFinalNewline": true,
   "typescript.tsdk": "node_modules/typescript/lib",
-  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  }
+  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
 }
