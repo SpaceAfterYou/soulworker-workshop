@@ -1,0 +1,36 @@
+query availablePlugins {
+  plugins {
+    nodes {
+      id
+      name
+      description
+      creator {
+        name
+      }
+      averageRating
+      versions(last: 1) {
+        nodes {
+          version {
+            major
+            minor
+            patch
+          }
+          uri
+        }
+      }
+    }
+  }
+}
+
+query installedPlugins($id: Int!) {
+  plugins(where: { id: { eq: $id } }) {
+    nodes {
+      name
+      description
+      creator {
+        name
+      }
+      averageRating
+    }
+  }
+}
