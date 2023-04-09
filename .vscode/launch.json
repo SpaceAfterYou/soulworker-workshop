@@ -5,17 +5,31 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "tauri",
       "type": "lldb",
       "request": "launch",
-      "name": "Debug Tauri",
       "program": "cargo",
-      "args": [
-        "run",
-        "--manifest-path=./src-tauri/Cargo.toml",
-        "--no-default-features"
-      ],
-      "cwd": "${workspaceFolder}",
-      "preLaunchTask": "ui:dev"
+      "args": ["run", "--manifest-path=./src-tauri/Cargo.toml", "--no-default-features"],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "ui",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "pnpm vite:dev"
+    },
+    {
+      "name": "devtools",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "pnpm devtools"
+    }
+  ],
+
+  "compounds": [
+    {
+      "name": "Let me in",
+      "configurations": ["tauri", "ui", "devtools"]
     }
   ]
 }
