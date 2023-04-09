@@ -1,11 +1,15 @@
-import devtools from '@vue/devtools'
-import { createApp } from 'vue'
-import App from './App.vue'
+import "./assets/main.postcss";
 
-import './assets/main.postcss'
+import { createApp } from "vue";
+import { router } from "./modules/router";
+import { apollo } from "./modules/apollo";
 
-if (process.env.NODE_ENV === 'development') {
-  devtools.connect('http://localhost', 8098)
+import devtools from "@vue/devtools";
+import App from "./App.vue";
+import { pinia } from "./modules/store";
+
+if (import.meta.env.DEV) {
+  devtools.connect("http://localhost", 8098);
 }
 
-createApp(App).mount('#app')
+createApp(App).use(router).use(pinia).use(apollo).mount("#app");
