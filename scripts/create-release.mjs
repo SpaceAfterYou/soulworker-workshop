@@ -13,19 +13,19 @@ const [_1, _2, type] = process.argv;
 
 switch (type) {
   // major
-  case "majs":
+  case "maj":
   case "major":
     ver = new SemVer(`${ver.major + 1}.0.0`);
     break;
 
   // minor
-  case "mins":
+  case "min":
   case "minor":
     ver = new SemVer(`${ver.major}.${ver.minor + 1}.0`);
     break;
 
   // patch
-  case "pats":
+  case "pat":
   case "patch":
     ver = new SemVer(`${ver.major}.${ver.minor}.${ver.patch + 1}`);
     break;
