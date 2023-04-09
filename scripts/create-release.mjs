@@ -1,7 +1,5 @@
 import { exec } from "node:child_process";
 import { readFile, writeFile } from "node:fs/promises";
-import { join } from "node:path";
-import { fileURLToPath } from "node:url";
 import { SemVer } from "semver";
 
 const packageJson = JSON.parse(await readFile("./package.json", "utf-8"));
