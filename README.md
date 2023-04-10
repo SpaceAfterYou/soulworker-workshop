@@ -61,3 +61,12 @@ Please follow the [code of conduct](./CODE_OF_CONDUCT.md) when interacting with 
 ## [Well cum 👌 to discord](http://discord.gg/SequFJP)
 
 [![Discord](https://img.shields.io/discord/606442027873206292?style=flat-square)](http://discord.gg/SequFJP)
+
+```
+Girls when they die:
+- Tell my mom I loved her...
+Guys:
+- I'm Dead, ♂️oh shit♂️
+
+(c) manulˣᵈ
+```
