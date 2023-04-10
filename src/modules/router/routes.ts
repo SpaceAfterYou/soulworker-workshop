@@ -44,6 +44,13 @@ export const routes: DeepReadonly<RouteRecordRaw[]> = [
         ],
       },
       {
+        path: RouteName.Studio,
+        name: RouteName.Studio,
+
+        component: () => import("@/pages/TheStudioPage.vue"),
+      },
+
+      {
         path: RouteName.Settings,
         name: RouteName.Settings,
 

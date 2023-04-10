@@ -8,8 +8,8 @@ const routes = [
 </script>
 
 <template>
-  <nav class="flex gap-4 pb-4 text-lg uppercase text-white/40">
-    <RouterLink v-for="{ name, title } in routes" :key="name" :to="{ name }" class="router-link border-b border-b-transparent px-2 transition duration-100">
+  <nav class="flex gap-4 pb-4 text-lg uppercase text-zinc-200/40">
+    <RouterLink v-for="{ name, title } in routes" :key="name" :to="{ name }" class="router-link border border-transparent px-2 transition duration-100">
       {{ title }}
     </RouterLink>
   </nav>
@@ -17,10 +17,11 @@ const routes = [
 
 <style scoped>
 .router-link-active {
-  @apply bg-zinc-200 text-zinc-900;
+  /* @apply bg-zinc-200/60 text-zinc-900; */
+  @apply text-zinc-200/60 border-zinc-200/60;
 }
 
 .router-link:not(.router-link-active):hover {
-  @apply bg-zinc-200/50 text-zinc-900;
+  @apply bg-zinc-200/60 text-zinc-900;
 }
 </style>

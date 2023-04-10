@@ -21,21 +21,21 @@ defineProps<Props>();
 
 <template>
   <ToolbarPanel class="flex justify-between gap-4">
-    <ToolbarButton class="group" @click="$emit('onRemove', id)">
-      <TrashIcon class="h-4 group-hover:hidden" />
-      <TrashIconSolid class="hidden h-4 group-hover:block" />
+    <ToolbarButton class="group/toolbar" @click="$emit('onRemove', id)">
+      <TrashIcon class="h-4 group-hover/toolbar:hidden" />
+      <TrashIconSolid class="hidden h-4 group-hover/toolbar:block" />
       <span>Remove</span>
     </ToolbarButton>
 
     <div class="flex gap-2">
-      <ToolbarButton class="group">
-        <HandThumbUpIcon class="h-4 text-green-500 group-hover:hidden" />
-        <HandThumbUpIconSolid class="hidden h-4 text-green-500 group-hover:block" />
+      <ToolbarButton class="group/toolbar">
+        <HandThumbUpIcon class="h-4 text-green-500 group-hover/toolbar:hidden" />
+        <HandThumbUpIconSolid class="hidden h-4 text-green-500 group-hover/toolbar:block" />
       </ToolbarButton>
 
-      <ToolbarButton class="group">
-        <HandThumbDownIcon class="h-4 text-red-500 group-hover:hidden" />
-        <HandThumbDownIconSolid class="hidden h-4 text-red-500 group-hover:block" />
+      <ToolbarButton class="group/toolbar">
+        <HandThumbDownIcon class="h-4 text-red-500 group-hover/toolbar:hidden" />
+        <HandThumbDownIconSolid class="hidden h-4 text-red-500 group-hover/toolbar:block" />
       </ToolbarButton>
     </div>
   </ToolbarPanel>

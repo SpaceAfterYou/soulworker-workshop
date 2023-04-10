@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { usePluginsStore } from "@/modules/store/plugins";
+import { CubeIcon } from "@heroicons/vue/24/outline";
 
 import PreviewPlugin from "@/components/Plugin/Preview/PreviewPlugin.vue";
 import ToolbarAvailablePanel from "@/components/Plugin/Toobar/Panels/ToolbarAvailablePanel.vue";
@@ -18,6 +19,10 @@ async function onAdd(params: { id: number; version: SemVer; url: URL }) {
   <AvailablePluginQuery>
     <template #default="{ id, name, description, rating, author, version, url }">
       <PreviewPlugin :id="id" :key="id" :name="name" :description="description" :rating="rating" :creator="author" :version="version">
+        <template #icon>
+          <CubeIcon />
+        </template>
+
         <ToolbarAvailablePanel :id="id" :version="version" :url="url" @on-add="onAdd" />
       </PreviewPlugin>
     </template>

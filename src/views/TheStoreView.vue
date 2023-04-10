@@ -15,8 +15,8 @@ import TheStoreHeader from "@/components/Store/TheStoreNav.vue";
 <style scoped>
 .router-link-active {
   /* 60% = border-r 10% + active border-r 50% */
-  @apply text-white/60;
+  @apply text-zinc-200/60;
 
-  @apply border-b-white/50;
+  @apply border-b-zinc-200/50;
 }
 </style>

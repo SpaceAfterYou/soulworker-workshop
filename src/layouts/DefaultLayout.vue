@@ -5,8 +5,9 @@ import TheSidebar from "@/components/TheSidebar.vue";
 </script>
 
 <template>
-  <section class="grid grid-cols-[auto_1fr] gap-2">
+  <section class="grid grid-cols-[auto_1fr]">
     <TheSidebar />
-    <RouterView class="py-4 pl-2 pr-4" />
+
+    <RouterView class="bg-zinc-800 p-4" />
   </section>
 </template>

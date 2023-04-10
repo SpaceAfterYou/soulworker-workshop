@@ -25,22 +25,32 @@ const version = computed(() => {
 </script>
 
 <template>
-  <section class="grid grid-cols-[1fr_auto] gap-2 overflow-hidden bg-zinc-500/10 p-3 leading-none">
-    <div class="flex items-baseline gap-2">
-      <span class="overflow-hidden text-ellipsis whitespace-nowrap font-bold uppercase">{{ name }}</span>
-      <span class="text-xs text-white/40">v{{ version }}</span>
+  <section class="group/plugin-preview leading-none">
+    <div
+      class="grid grid-cols-[auto_1fr_auto] items-center gap-x-4 overflow-hidden bg-zinc-500/5 p-3 transition duration-100 group-hover/plugin-preview:bg-zinc-500/20"
+    >
+      <div class="row-span-2 h-12 w-12">
+        <slot name="icon" />
+      </div>
+
+      <div class="flex items-baseline gap-2">
+        <span class="overflow-hidden text-ellipsis whitespace-nowrap font-bold uppercase">{{ name }}</span>
+        <span class="text-xs text-zinc-200/40">v{{ version }}</span>
+      </div>
+
+      <span class="text-right font-bold" :class="[overallClassRating]">
+        {{ rating.toFixed(1) }}
+      </span>
+
+      <div class="overflow-hidden text-ellipsis whitespace-nowrap text-zinc-200/40">
+        {{ description }}
+      </div>
+
+      <div class="text-right lowercase italic text-pink-500/40">{{ creator }}</div>
     </div>
 
-    <span class="text-right font-bold" :class="[overallClassRating]">
-      {{ rating.toFixed(1) }}
-    </span>
-
-    <div class="overflow-hidden text-ellipsis whitespace-nowrap text-white/40">
-      {{ description }}
+    <div class="mt-px bg-zinc-500/5 p-3 transition duration-100 group-hover/plugin-preview:bg-zinc-500/20">
+      <slot />
     </div>
-
-    <div class="text-right lowercase italic text-pink-500/40">{{ creator }}</div>
-
-    <slot />
   </section>
 </template>
