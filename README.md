@@ -36,7 +36,8 @@ Please follow the [code of conduct](./CODE_OF_CONDUCT.md) when interacting with 
 - For other users (you are best too)
 
   - Run `pnpm letmeint` in terminal
-  - ## Features
+
+## Features
 
 - [Vue 3](https://vuejs.org/) / [TypeScript](https://www.typescriptlang.org/)
 
