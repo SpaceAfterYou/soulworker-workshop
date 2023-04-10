@@ -1,8 +1,12 @@
 export const enum RouteName {
   Store = "Store",
-  Studio = "Studio",
   Library = "Library",
   Plugins = "Plugins",
+
+  Studio = "Studio",
+  MyPlugins = "MyPlugins",
+  AddPlugin = "AddPlugin",
+
   Settings = "Settings",
 
   PluginsView = "PluginsView",

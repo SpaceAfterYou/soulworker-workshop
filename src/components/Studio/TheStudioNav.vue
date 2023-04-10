@@ -5,8 +5,8 @@ import ThingTabs from "@/components/Thing/ThingTabs.vue";
 import ThingTab from "@/components/Thing/ThingTab.vue";
 
 const routes = [
-  { name: RouteName.Plugins, title: "Plugins" },
-  { name: RouteName.Library, title: "Library" },
+  { name: RouteName.MyPlugins, title: "My Plugins" },
+  { name: RouteName.AddPlugin, title: "Add Plugin" },
 ];
 </script>
 
