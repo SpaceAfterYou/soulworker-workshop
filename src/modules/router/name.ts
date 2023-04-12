@@ -5,6 +5,8 @@ export const enum RouteName {
 
   Studio = "Studio",
   MyPlugins = "MyPlugins",
+  MyPluginInfo = "MyPluginInfo",
+
   AddPlugin = "AddPlugin",
 
   Settings = "Settings",

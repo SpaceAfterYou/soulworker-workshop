@@ -12,9 +12,21 @@ export const studio: RouteRecordRaw = {
   children: [
     {
       path: RouteName.MyPlugins,
-      name: RouteName.MyPlugins,
+      component: () => import("@/views/Studio/TheMyPluginsView.vue"),
+      children: [
+        {
+          path: RouteName.MyPlugins,
+          name: RouteName.MyPlugins,
 
-      component: () => import("@/pages/Studio/TheMyPlugins.vue"),
+          component: () => import("@/pages/Studio/ThePluginHomePage.vue"),
+        },
+        {
+          path: RouteName.MyPluginInfo,
+          name: RouteName.MyPluginInfo,
+
+          component: () => import("@/pages/Studio/ThePluginInfoPage.vue"),
+        },
+      ],
     },
     {
       path: RouteName.AddPlugin,

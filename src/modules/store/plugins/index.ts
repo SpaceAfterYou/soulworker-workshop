@@ -1,5 +1,4 @@
 import { SemVer } from "semver";
-import { defineStore } from "pinia";
 
 import { toJson } from "./internal/to-json";
 import { fromJson } from "./internal/from-json";
@@ -7,7 +6,7 @@ import { useIpc } from "@/modules/ipc";
 import { useSettingsStore } from "../settings";
 
 import type { PluginInfoEntity } from "@/api/gql";
-import type { LocalPluginEntries, LocalPluginEntry, ReadonlyLocalPluginEntries } from "./types";
+import type { LocalPluginEntries, ReadonlyLocalPluginEntries } from "./types";
 
 export const usePluginsStore = defineStore("plugins", () => {
   const ipc = useIpc();

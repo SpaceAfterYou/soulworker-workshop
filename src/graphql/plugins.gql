@@ -34,3 +34,32 @@ query installedPlugins($id: Int!) {
     }
   }
 }
+
+query myPluginsList($id: Int!)  {
+  plugins(where: { creator: { id: { eq: $id } } }) {
+    nodes {
+      id
+      name
+    }
+  }
+}
+
+query myPluginsInfo($id: Int!)  {
+  plugins(where: { id: { eq: $id } }) {
+    nodes {
+      name
+      description
+      averageRating
+      versions {
+        nodes {
+          version {
+            major
+            minor
+            patch
+          }
+          uri
+        }
+      }
+    }
+  }
+}

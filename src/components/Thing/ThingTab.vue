@@ -7,18 +7,13 @@ defineProps<Props>();
 </script>
 
 <template>
-  <RouterLink :to="{ name }" class="router-link border border-transparent px-2 transition duration-100">
+  <RouterLink :to="{ name }" class="router-link uppercase text-zinc-200/40 transition duration-100 hover:border-r-zinc-200/50 hover:text-zinc-200/60">
     {{ title }}
   </RouterLink>
 </template>
 
 <style scoped>
 .router-link-active {
-  /* @apply bg-zinc-200/60 text-zinc-900; */
-  @apply text-zinc-200/60 border-zinc-200/60;
-}
-
-.router-link:not(.router-link-active):hover {
-  @apply bg-zinc-200/60 text-zinc-900;
+  @apply text-zinc-200 cursor-default;
 }
 </style>

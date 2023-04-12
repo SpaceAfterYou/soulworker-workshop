@@ -12,7 +12,7 @@ export default defineConfig({
   plugins: [
     vue(),
     AutoImport({
-      imports: ["vue", "vue-router"],
+      imports: ["vue", "vue-router", "pinia"],
       dts: join("src", "auto-imports.d.ts"),
       eslintrc: {
         enabled: true,

@@ -25,7 +25,7 @@ const version = computed(() => {
 </script>
 
 <template>
-  <section class="group/plugin-preview leading-none">
+  <section class="group/plugin-preview leading-none shadow hover:shadow-lg">
     <div
       class="grid grid-cols-[auto_1fr_auto] items-center gap-x-4 overflow-hidden bg-zinc-500/5 p-3 transition duration-100 group-hover/plugin-preview:bg-zinc-500/20"
     >

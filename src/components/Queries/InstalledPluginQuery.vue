@@ -3,9 +3,7 @@ import { useInstalledPluginsQuery, type InstalledPluginsQuery } from "@/api/gql"
 
 type Node = NonNullable<NonNullable<InstalledPluginsQuery["plugins"]>["nodes"]>[number];
 
-type Props = { id: number };
-
-const props = defineProps<Props>();
+const props = defineProps<{ id: number }>();
 
 const { result } = useInstalledPluginsQuery({ id: props.id });
 
